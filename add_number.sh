@@ -10,8 +10,9 @@ total_lines=$(wc -l < random_numbers.txt)
 random_line=$((RANDOM % total_lines + 1))
 
 # Append the random number as a new line to the random line in the file
-sed -i "${random_line}i$RANDOM_NUMBER" random_numbers.txt
-
+sed -i.bak "${random_line}i\\
+${RANDOM_NUMBER}\\
+" random_numbers.txt
 # Change to the Git repository directory
 cd "$REPO_PATH" || exit
 
