@@ -19,7 +19,7 @@ cd "$REPO_PATH" || exit
 # Add the changes to the file
 git add random_numbers.txt
 
-git commit -m "Add a random number ($RANDOM_NUMBER) to a line ${random_line}"
+git commit -m "Add a random number ($RANDOM_NUMBER) to line ${random_line}"
 
 git pull
 git push
